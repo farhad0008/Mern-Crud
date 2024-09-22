@@ -27,7 +27,6 @@ app.post("/users",(req,res)=>{
 })
 
 app.delete("/users/:id",async (req,res)=>{
-
   const retDelete= await users.findByIdAndDelete({_id:req.params.id})
   res.status(200).json(retDelete)
 })
